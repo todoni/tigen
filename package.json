@@ -1,4 +1,8 @@
 {
   "name": "cli-package",
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "@types/node": "^22.13.2",
+    "typescript": "^5.7.3"
+  }
 }
