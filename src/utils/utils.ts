@@ -1,11 +1,16 @@
+import { ValidationError, XMLValidator } from "fast-xml-parser";
 import fs from "fs/promises";
 
 export async function extractSVGData(filePath: string) {
   try {
     const rawContent = await fs.readFile(filePath, "utf-8");
+    const result: ValidationError | true = XMLValidator.validate(rawContent);
+    if (result !== true && result.err) {
+      throw new Error("Invalid file");
+    }
 
     if (!rawContent.startsWith("<svg")) {
-      throw new Error("Invalid SVG file format");
+      throw new Error("Not SVG file format");
     }
 
     const widthMatch = rawContent.match(/width="([^"]+)"/);
