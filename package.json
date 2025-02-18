@@ -2,7 +2,7 @@
   "name": "cli-package",
   "packageManager": "yarn@4.6.0",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest run"
   },
   "devDependencies": {
     "@types/node": "^22.13.2",
