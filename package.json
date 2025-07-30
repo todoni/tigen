@@ -7,6 +7,7 @@
   "devDependencies": {
     "@types/node": "^22.13.2",
     "fast-xml-parser": "^4.5.2",
+    "figma-api-exporter": "^1.0.0",
     "typescript": "^5.7.3",
     "vitest": "^3.0.5"
   }
