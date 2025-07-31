@@ -2,8 +2,10 @@
   "name": "cli-package",
   "packageManager": "yarn@4.6.0",
   "scripts": {
+    "build": "tsup",
     "test": "vitest run"
   },
+  "bin": "dist/index.js",
   "devDependencies": {
     "@types/node": "^22.13.2",
     "axios": "^1.11.0",
