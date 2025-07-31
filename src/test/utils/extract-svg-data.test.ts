@@ -1,34 +1,38 @@
 import path from "path";
 import { expect, test } from "vitest";
-import { extractSVGData } from "../../utils/utils";
+import { extractSVGDataFromFilePath } from "../../utils/extractSVGData";
 
 test("Any invalid cases should return null", async () => {
   expect(
-    await extractSVGData(path.resolve(__dirname, "../fixture/svgs/not-exist"))
+    await extractSVGDataFromFilePath(
+      path.resolve(__dirname, "../fixture/svgs/empty")
+    )
   ).toEqual(null);
 
   expect(
-    await extractSVGData(path.resolve(__dirname, "../fixture/svgs/empty"))
+    await extractSVGDataFromFilePath(
+      path.resolve(__dirname, "../fixture/svgs/empty.svg")
+    )
   ).toEqual(null);
 
   expect(
-    await extractSVGData(path.resolve(__dirname, "../fixture/svgs/empty.svg"))
-  ).toEqual(null);
-
-  expect(
-    await extractSVGData(
+    await extractSVGDataFromFilePath(
       path.resolve(__dirname, "../fixture/svgs/none-svg.svg")
     )
   ).toEqual(null);
 
   expect(
-    await extractSVGData(path.resolve(__dirname, "../fixture/svgs/invalid.svg"))
+    await extractSVGDataFromFilePath(
+      path.resolve(__dirname, "../fixture/svgs/invalid.svg")
+    )
   ).toEqual(null);
 });
 
 test("Valid file should return object", async () => {
   expect(
-    await extractSVGData(path.resolve(__dirname, "../fixture/svgs/valid.svg"))
+    await extractSVGDataFromFilePath(
+      path.resolve(__dirname, "../fixture/svgs/valid.svg")
+    )
   ).toEqual({
     width: "24",
     height: "24",
