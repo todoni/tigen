@@ -6,7 +6,7 @@ import { generateIconTypeFile } from "./utils/generateIconTypeFile";
 
 const token = process.env.FIGMA_API_TOKEN;
 
-export async function generate(figmaFileId: string, figmaCanvas: string) {
+export async function generate(figmaFileId: string, figmaPageName: string) {
   if (!token) {
     throw new Error("figma api token not set");
   }
@@ -14,7 +14,7 @@ export async function generate(figmaFileId: string, figmaCanvas: string) {
   const exporter = figmaApiExporter(token);
   const svgsData = await exporter.getSvgs({
     fileId: figmaFileId,
-    canvas: figmaCanvas,
+    canvas: figmaPageName,
   });
   const downloadedSVGsData = await downloadSVGsData(svgsData.svgs);
   const result: Record<string, any> = {};
