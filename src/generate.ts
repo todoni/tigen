@@ -4,17 +4,19 @@ import { downloadSVGsData } from "./utils/downloadSVGsData";
 import { extractSVGData } from "./utils/extractSVGData";
 import { generateIconTypeFile } from "./utils/generateIconTypeFile";
 
-const token = process.env.FIGMA_API_TOKEN;
+const { FIGMA_API_TOKEN } = process.env;
+const { FIGMA_FILE_ID } = process.env;
+const { FIGMA_PAGE_NAME } = process.env;
 
-export async function generate(figmaFileId: string, figmaPageName: string) {
-  if (!token) {
-    throw new Error("figma api token not set");
+export async function generate() {
+  if (!FIGMA_API_TOKEN || !FIGMA_FILE_ID || !FIGMA_PAGE_NAME) {
+    throw new Error("Env not set.");
   }
 
-  const exporter = figmaApiExporter(token);
+  const exporter = figmaApiExporter(FIGMA_API_TOKEN);
   const svgsData = await exporter.getSvgs({
-    fileId: figmaFileId,
-    canvas: figmaPageName,
+    fileId: FIGMA_FILE_ID,
+    canvas: FIGMA_PAGE_NAME,
   });
   const downloadedSVGsData = await downloadSVGsData(svgsData.svgs);
   const result: Record<string, any> = {};
