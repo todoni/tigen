@@ -1,9 +1,14 @@
 import { ValidationError, XMLValidator } from "fast-xml-parser";
-import fs from "fs/promises";
+import { readFileSync } from "fs";
 
-export async function extractSVGData(filePath: string) {
+export async function extractSVGDataFromFilePath(filePath: string) {
+  const rawContent = readFileSync(filePath, "utf-8");
+  const data = await extractSVGData(rawContent);
+  return data;
+}
+
+export async function extractSVGData(rawContent: string) {
   try {
-    const rawContent = await fs.readFile(filePath, "utf-8");
     const result: ValidationError | true = XMLValidator.validate(rawContent);
     if (result !== true && result.err) {
       throw new Error("Invalid file");
