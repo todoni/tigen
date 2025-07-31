@@ -21,8 +21,8 @@ export async function extractSVGData(rawContent: string) {
     const widthMatch = rawContent.match(/width="([^"]+)"/);
     const heightMatch = rawContent.match(/height="([^"]+)"/);
 
-    const width = widthMatch ? widthMatch[1] : 24;
-    const height = heightMatch ? heightMatch[1] : 24;
+    const width = widthMatch ? widthMatch[1] : "24";
+    const height = heightMatch ? heightMatch[1] : "24";
 
     const pathMatches = Array.from(
       rawContent.matchAll(/<path[^>]*d="([^"]+)"[^>]*>/g)
