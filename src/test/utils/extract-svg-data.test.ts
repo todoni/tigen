@@ -1,6 +1,6 @@
 import path from "path";
 import { expect, test } from "vitest";
-import { extractSVGDataFromFilePath } from "../../utils/utils";
+import { extractSVGDataFromFilePath } from "../../utils/extractSVGData";
 
 test("Any invalid cases should return null", async () => {
   expect(
