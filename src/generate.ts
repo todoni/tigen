@@ -1,16 +1,19 @@
 import chalk from "chalk";
-import ora from "ora";
+import dotenv from "dotenv";
 import figmaApiExporter from "figma-api-exporter";
 import { writeFileSync } from "fs";
+import ora from "ora";
 import { downloadSVGsData } from "./utils/downloadSVGsData";
 import { extractSVGData } from "./utils/extractSVGData";
 import { generateIconTypeFile } from "./utils/generateIconTypeFile";
+
+dotenv.config();
 
 const { FIGMA_API_TOKEN, FIGMA_FILE_ID, FIGMA_PAGE_NAME } = process.env;
 
 export async function generate() {
   const log = console.log;
-
+  console.log(FIGMA_API_TOKEN, FIGMA_FILE_ID, FIGMA_PAGE_NAME);
   if (!FIGMA_API_TOKEN || !FIGMA_FILE_ID || !FIGMA_PAGE_NAME) {
     log(chalk.red("❌ Missing required environment variables."));
     throw new Error("Env not set.");
