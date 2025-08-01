@@ -5,7 +5,9 @@
     "build": "tsup",
     "test": "vitest run"
   },
-  "bin": "dist/index.js",
+  "bin": {
+    "generate-icon": "dist/index.js"
+  },
   "devDependencies": {
     "@types/node": "^22.13.2",
     "axios": "^1.11.0",
