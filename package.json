@@ -1,12 +1,26 @@
 {
-  "name": "typed-icon-generator",
+  "name": "tigen",
+  "description": "Convert SVG to typed component.",
+  "license": "MIT",
+  "author": {
+    "name": "todoni"
+  },
+  "version": "0.0.0",
   "packageManager": "yarn@4.6.0",
   "scripts": {
     "build": "tsup",
     "test": "vitest run"
   },
-  "bin": {
-    "generate-icon": "dist/index.js"
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
   "devDependencies": {
     "@types/node": "^22.13.2",
