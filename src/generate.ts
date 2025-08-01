@@ -13,7 +13,6 @@ const { FIGMA_API_TOKEN, FIGMA_FILE_ID, FIGMA_PAGE_NAME } = process.env;
 
 export async function generate() {
   const log = console.log;
-  console.log(FIGMA_API_TOKEN, FIGMA_FILE_ID, FIGMA_PAGE_NAME);
   if (!FIGMA_API_TOKEN || !FIGMA_FILE_ID || !FIGMA_PAGE_NAME) {
     log(chalk.red("❌ Missing required environment variables."));
     throw new Error("Env not set.");
