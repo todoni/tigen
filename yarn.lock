@@ -1014,6 +1014,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:^5.4.1":
+  version: 5.4.1
+  resolution: "chalk@npm:5.4.1"
+  checksum: 10c0/b23e88132c702f4855ca6d25cb5538b1114343e41472d5263ee8a37cccfccd9c4216d111e1097c6a27830407a1dc81fecdf2a56f2c63033d4dbbd88c10b0dcef
+  languageName: node
+  linkType: hard
+
 "check-error@npm:^2.1.1":
   version: 2.1.1
   resolution: "check-error@npm:2.1.1"
@@ -1036,20 +1043,6 @@ __metadata:
   checksum: 10c0/43925b87700f7e3893296c8e9c56cc58f926411cce3a6e5898136daaf08f08b9a8eb76d37d3267e707d0dcc17aed2e2ebdf5848c0c3ce95cf910a919935c1b10
   languageName: node
   linkType: hard
-
-"cli-package@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "cli-package@workspace:."
-  dependencies:
-    "@types/node": "npm:^22.13.2"
-    axios: "npm:^1.11.0"
-    fast-xml-parser: "npm:^4.5.2"
-    figma-api-exporter: "npm:^1.0.0"
-    tsup: "npm:^8.5.0"
-    typescript: "npm:^5.7.3"
-    vitest: "npm:^3.0.5"
-  languageName: unknown
-  linkType: soft
 
 "color-convert@npm:^2.0.1":
   version: 2.0.1
@@ -2706,6 +2699,23 @@ __metadata:
   checksum: 10c0/2eddc1138ad992a2e67d826e92e0b0c4f650367355866c77df8368ade9489e0a8bf2b52b352e97fec83dc690af05881c29c489af27acb86ac2cef38b0d029087
   languageName: node
   linkType: hard
+
+"typed-icon-generator@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "typed-icon-generator@workspace:."
+  dependencies:
+    "@types/node": "npm:^22.13.2"
+    axios: "npm:^1.11.0"
+    chalk: "npm:^5.4.1"
+    fast-xml-parser: "npm:^4.5.2"
+    figma-api-exporter: "npm:^1.0.0"
+    tsup: "npm:^8.5.0"
+    typescript: "npm:^5.7.3"
+    vitest: "npm:^3.0.5"
+  bin:
+    generate-icon: dist/index.js
+  languageName: unknown
+  linkType: soft
 
 "typescript@npm:^5.7.3":
   version: 5.7.3

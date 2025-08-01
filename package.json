@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/node": "^22.13.2",
     "axios": "^1.11.0",
+    "chalk": "^5.4.1",
     "fast-xml-parser": "^4.5.2",
     "figma-api-exporter": "^1.0.0",
     "tsup": "^8.5.0",
