@@ -61,9 +61,9 @@ export async function generate() {
     writeSpinner.succeed(chalk.green("svgPaths.ts created"));
 
     // 5. Generate types
-    const typesSpinner = ora(chalk.cyan("Generating types.ts...")).start();
+    const typesSpinner = ora(chalk.cyan("Generating icons.ts...")).start();
     generateIconTypeFile(result);
-    typesSpinner.succeed(chalk.green("types.ts created"));
+    typesSpinner.succeed(chalk.green("icons.ts created"));
 
     log(chalk.bold.greenBright("\n🎉 Icon generation complete!\n"));
   } catch (err) {
