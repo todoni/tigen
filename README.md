@@ -19,6 +19,7 @@ npx tigen
 yarn dlx tigen
 pnpx tigen
 ```
+
 ## Requirements
 
 You must set the following environment variables:
@@ -120,7 +121,11 @@ Here are some upcoming features planned for future releases of **tigen**:
 
 - **Custom output paths**
 
-  Support for specifying suctom output locations for generated files via CLI flags.
+  Support for specifying custom output locations for generated files via CLI flags.
+
+- **Custom icon name prefix**
+
+  Support for specifying custom prefix for icon name.
 
 - **Icon component generator**
 
