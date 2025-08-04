@@ -5,7 +5,7 @@
   "author": {
     "name": "todoni"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "yarn@4.6.0",
   "scripts": {
     "build": "tsup",
@@ -33,5 +33,12 @@
     "tsup": "^8.5.0",
     "typescript": "^5.7.3",
     "vitest": "^3.0.5"
-  }
+  },
+  "keywords": [
+    "React",
+    "Typescript",
+    "SVG",
+    "Icon",
+    "Figma"
+  ]
 }
