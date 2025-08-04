@@ -5,7 +5,7 @@
   "author": {
     "name": "todoni"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "packageManager": "yarn@4.6.0",
   "scripts": {
     "build": "tsup",
