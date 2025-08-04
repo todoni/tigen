@@ -2717,6 +2717,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tigen@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "tigen@workspace:."
+  dependencies:
+    "@types/node": "npm:^22.13.2"
+    axios: "npm:^1.11.0"
+    chalk: "npm:^5.4.1"
+    dotenv: "npm:^17.2.1"
+    fast-xml-parser: "npm:^4.5.2"
+    figma-api-exporter: "npm:^1.0.0"
+    ora: "npm:^8.2.0"
+    tsup: "npm:^8.5.0"
+    typescript: "npm:^5.7.3"
+    vitest: "npm:^3.0.5"
+  bin:
+    tigen: ./dist/index.js
+  languageName: unknown
+  linkType: soft
+
 "tinybench@npm:^2.9.0":
   version: 2.9.0
   resolution: "tinybench@npm:2.9.0"
@@ -2828,25 +2847,6 @@ __metadata:
   checksum: 10c0/2eddc1138ad992a2e67d826e92e0b0c4f650367355866c77df8368ade9489e0a8bf2b52b352e97fec83dc690af05881c29c489af27acb86ac2cef38b0d029087
   languageName: node
   linkType: hard
-
-"typed-icon-generator@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "typed-icon-generator@workspace:."
-  dependencies:
-    "@types/node": "npm:^22.13.2"
-    axios: "npm:^1.11.0"
-    chalk: "npm:^5.4.1"
-    dotenv: "npm:^17.2.1"
-    fast-xml-parser: "npm:^4.5.2"
-    figma-api-exporter: "npm:^1.0.0"
-    ora: "npm:^8.2.0"
-    tsup: "npm:^8.5.0"
-    typescript: "npm:^5.7.3"
-    vitest: "npm:^3.0.5"
-  bin:
-    generate-icon: dist/index.js
-  languageName: unknown
-  linkType: soft
 
 "typescript@npm:^5.7.3":
   version: 5.7.3
