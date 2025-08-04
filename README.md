@@ -2,16 +2,12 @@
 
 A CLI for converting SVG to typed component.
 
----
-
 ## Features
 
 - ⚡ Fetches SVG icons directly from a Figma page
 - 🧠 Automatically generates icon path data and type definitions
 - 🚫 No need to install globally – supports `npx`, `yarn dlx`
 - ⚙️ Outputs fully typed, ready-to-use icon metadata
-
----
 
 ## Usage
 
@@ -23,9 +19,6 @@ npx tigen
 yarn dlx tigen
 pnpx tigen
 ```
-
----
-
 ## Requirements
 
 You must set the following environment variables:
@@ -44,8 +37,6 @@ FIGMA_API_TOKEN=your_figma_token
 FIGMA_FILE_ID=your_file_id
 FIGMA_PAGE_NAME=page_name_in_file
 ```
-
----
 
 ## Output
 
@@ -85,8 +76,6 @@ export const ICON_NAME = {
 export type IconName = (typeof ICON_NAME)[keyof typeof ICON_NAME];
 ```
 
----
-
 ## Example Usage
 
 Here's how you might use the generated output to build a typed `<Icon />` component:
@@ -121,15 +110,18 @@ export function Icon({ icon, className, ...props }: Props) {
 }
 ```
 
----
-
 ## 🔧 Comming Soon
 
 Here are some upcoming features planned for future releases of **tigen**:
 
 - **Local SVG import support**
+
   Allow generating `svgPaths.ts` and `icons.ts` from a local folder of SVG files, without relying on Figma.
+
 - **Custom output paths**
+
   Support for specifying suctom output locations for generated files via CLI flags.
+
 - **Icon component generator**
+
   Auto-generate a reusable `<Icon />` React component template.
