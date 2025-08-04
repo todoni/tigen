@@ -71,7 +71,7 @@ export const svgPaths = {
 };
 ```
 
-### `types.ts`
+### `icons.ts`
 
 Contains typed icon name constants and types:
 
@@ -95,7 +95,7 @@ Here's how you might use the generated output to build a typed `<Icon />` compon
 // Icon.tsx
 import { SVGProps } from "react";
 import { svgPaths } from "./svgPaths";
-import { IconName } from "./types";
+import { IconName } from "./icons";
 
 interface Props extends SVGProps<SVGSVGElement> {
   icon: IconName;
@@ -128,7 +128,7 @@ export function Icon({ icon, className, ...props }: Props) {
 Here are some upcoming features planned for future releases of **tigen**:
 
 - **Local SVG import support**
-  Allow generating `svgPaths.ts` and `types.ts` from a local folder of SVG files, without relying on Figma.
+  Allow generating `svgPaths.ts` and `icons.ts` from a local folder of SVG files, without relying on Figma.
 - **Custom output paths**
   Support for specifying suctom output locations for generated files via CLI flags.
 - **Icon component generator**
