@@ -1,6 +1,8 @@
 # tigen
 
 A CLI for converting SVG to typed component.
+<img src="media/demo_launch.gif"/>
+<img src="media/demo_ide.gif"/>
 
 ## Features
 
